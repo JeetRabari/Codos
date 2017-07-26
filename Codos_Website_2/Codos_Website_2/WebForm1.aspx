@@ -11,7 +11,7 @@
             <asp:ListItem Text="jkah" Value="1"></asp:ListItem>
             <asp:ListItem Text="Jfkaf" Value="1"></asp:ListItem>
         </asp:DropDownList>
-       <asp:Button ID="Button2" cssClass="btn btn-sucess" runat="server" Text="Button" /><br />
+       <asp:Button ID="Button2" cssClass="btn btn-danger" runat="server" Text="Button" /><br />
         <asp:Label ID="Label1" class="label-info" runat="server" Text="Label"></asp:Label>
     </form>
 </asp:Content>
