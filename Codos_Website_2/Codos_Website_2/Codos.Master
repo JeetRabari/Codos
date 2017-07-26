@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Codos.master.cs" Inherits="Codos_Website_2.Codos" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap-theme.min.css" />
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="page-header" style="background-color:#; height: 108px;">
+             <div class="container-fluid">
+                 <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="./HE_logo.png" style="width: 156px">
+                    </a>
+                 </div>
+            </div>
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Challenges</a></li>
+            <li role="presentation"><a href="#">Practice</a></li>
+        </ul>
+    </div>
+    <asp:ContentPlaceHolder ID="YourCode" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</body>
+</html>
