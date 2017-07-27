@@ -37,17 +37,94 @@
                     <asp:ContentPlaceHolder ID="ProblemDescription" runat="server">
 
                     </asp:ContentPlaceHolder>
-                    <div id="editor" >
-                        <h2>Code Editor</h2>
-                        <script>
-                            var myCodeEditor = CodeMirror(document.getElementById("editor"), {
-                                value: "function myScript() { return 100; }\n",
-                                mode: "javascript",
+                    <hr class="divider" style="border-width: 2px;border-color: #337ab7;" />
+                    <div id="editor">
+                        <h2 style="margin-bottom:0px;color:#337ab7">Code Editor</h2>
+                        
+                        <div id="languageselect" style="height:35px;width:100%">
+                            <div class="dropdown" style="float:right">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span id="selected">Select</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="langList">
+                                    <li><a href="javascript:void(0)">C</a></li>
+                                    <li><a href="javascript:void(0)">C++</a></li>
+                                    <li><a href="javascript:void(0)">C#</a></li>
+                                    <li><a href="javascript:void(0)">Java</a></li>
+                                    <li><a href="javascript:void(0)">JavaScript(Rhino)</a></li>
+                                    <li><a href="javascript:void(0)">JavaScript(Node.js)</a></li>
+                                    <li><a href="javascript:void(0)">Php</a></li>
+                                    <li><a href="javascript:void(0)">Python 2</a></li>
+                                    <li><a href="javascript:void(0)">Python 3</a></li>
+                                </ul>
+                            </div>
+                           <script>
+                                $(document).ready(function () {
+                                    $('#langList li a').bind('click', function () {
+                                        if ($(this).html() == "C") {
+                                            myCodeMirror.setOption("mode", "text/x-csrc");
+                                            myCodeMirror.setOption("value", "#include <stdio.h>\n\nint main(){\nprintf(\"Hello World!\\n\");\n\nreturn 0;\n}");
+                                        } else if ($(this).html() == "JavaScript(Rhino)") {
+                                            myCodeMirror.setOption('mode', 'text/javascript');
+                                            myCodeMirror.setOption("value", "/* // Below is a sample code to process input from STDIN. // Equivalent in effect to the Java declaration import java.io.*; importPackage(java.io); importPackage(java.lang); importPackage(java.math); importPackage(java.util); var sc = new Scanner(System['in']); var input = sc.nextInt(); System.out.println(input); System.out.println('Hello, there!\n'); // End of input processing code. */ \n\nprint ('Hello World!\\n');");
+                                        } else if ($(this).html() == "JavaScript(Node.js)") {
+                                            myCodeMirror.setOption('mode', 'text/javascript');
+                                            myCodeMirror.setOption("value", "function main(input) { //Enter your code here \nprocess.stdout.write(\"Hello World!\"); }\nprocess.stdin.resume();\nprocess.stdin.setEncoding(\"utf- 8\");\nvar stdin_input = \"\";\nprocess.stdin.on(\"data\", function (input) { stdin_input += input; });\n process.stdin.on(\"end\", function () { main(stdin_input); });");
+                                        }
+                                        else if ($(this).html() == "C++") {
+                                            myCodeMirror.setOption("mode", "text/x-c++src");
+                                            myCodeMirror.setOption("value", "#include <iostream> \n\nusing namespace std; \n\nint main() { \ncout << \"Hello World!\" << endl; \nreturn 0; \n}");
+                                        } else if ($(this).html() == "C#") {
+                                            myCodeMirror.setOption("mode", "text/x-csharp");
+                                            myCodeMirror.setOption("value", "using System; \nusing System.Numerics; \nclass MyClass { \nstatic void Main(string[] args) { \n/* * Read input from stdin and provide input before running var line1 = System.Console.ReadLine().Trim(); \n var N = Int32.Parse(line1); \nfor (var i = 0; i < N; i++) { \nSystem.Console.WriteLine(\"hello world\"); } */ \nSystem.Console.WriteLine(\"Hello World!\\nn\"); \n} \n}");
+                                        } else if ($(this).html() == "Java") {
+                                            myCodeMirror.setOption("mode", "text/x-java");
+                                            myCodeMirror.setOption("value", "/*Use only console input output.*/\n\nclass TestClass {\n\npublic static void main(String args[]) throws Exception {\n\nSystem.out.println(\"Hello World!\");}}");
+                                        } else if ($(this).html() == "Python 2") {
+                                            myCodeMirror.setOption("mode", "text/x-python");
+                                            myCodeMirror.setOption("value", "''' # Read input from stdin and provide input before running code name = raw_input() print 'Hi, %s.' % name ''' \n\nprint 'Hello World!'");
+                                        } else if ($(this).html() == "Php") {
+                                            myCodeMirror.setOption("mode", "text/x-php");
+                                            myCodeMirror.setOption("value", "<?php /* * Read input from stdin and provide input before running code fscanf(STDIN, \"%s\n\", $name); echo \"Hi, \".$name; */ \n\necho \"Hello World!\"; ?>");
+                                        } else if ($(this).html() == "Python 3") {
+                                            myCodeMirror.setOption("mode", "text/x-python");
+                                            myCodeMirror.setOption("value", "print(\"Hello World!\")");
+                                        } else {
+                                            myCodeMirror.setOption("mode", "text/x-c++src");
+                                            myCodeMirror.setOption("value", "#include <iostream> \nusing namespace std; \nint main() { \ncout << \"Hello World!\" << endl; \nreturn 0; \n}");
+                                        }
+
+                                        $('#selected').text($(this).text());
+                                 });
+                               });
+                            </script>
+                            <span style="vertical-align:sub;padding:7px;float:right">Choose language</span>
+                        </div>
+                        <textarea id="myText" rows="4" cols="10"></textarea>
+                        <script>var myTextArea = document.getElementById('myText');
+                            var config = {
                                 theme: "mdn-like",
-                                lineNumbers: true
-                            });
-                        </script>
+                                lineNumbers: true,
+                                smartIndent: true,
+                                lineWrapping: true,
+                                mode: "text/x-csrc",
+                                matchBrackets: true
+                            };
+                            var myCodeMirror = CodeMirror.fromTextArea(myTextArea, config);
+                            myCodeMirror.setSize("100%", 600);</script>
+                        </div>
+                    <div id="editorbutton" style="height:35px;background-color:#F8FCFF;margin-top:7px">
+                        <div id="Compile&TestButton" style="float: right">
+                            <form runat="server">
+                                <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="Compile and test" />
+                                <asp:Button ID="Button2" class="btn btn-success" runat="server" Text="Submit" />
+                            </form>
+                        </div>
                     </div>
+                    <asp:ContentPlaceHolder ID="Result" runat="server">
+
+                    </asp:ContentPlaceHolder>
                 </div> 
 
                 <div id="solution" class="tab-pane fade">
@@ -64,10 +141,7 @@
                     </asp:ContentPlaceHolder>
                 </div>
             </div>
-       </div>
-        <div class="row" id="row4">
-            <div class="col-lg-8 col-lg-offset-1 col-sm-8 col-sm-offset-1 col-xs-8 col-xs-offset-1 col-md-8 col-md-offset-1" id="CodeEditor">
-            </div>
-        </div>
+      </div>
+        
        </div>
 </asp:Content>

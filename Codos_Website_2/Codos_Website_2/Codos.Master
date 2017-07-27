@@ -4,15 +4,19 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>Codos</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="./css/bootstrape.css" />
+    <link rel="stylesheet" href="./css/sticky-footer-navbar.css" />
     <!--Code mirror-->
     <link rel="stylesheet" href="./codemirror/lib/codemirror.css">
     <script src="./codemirror/lib/codemirror.js"></script>
+    <script src="./codemirror/mode/clike/clike.js"></script>
     <script src="./codemirror/mode/javascript/javascript.js"></script>
-     <link rel="stylesheet" href="./codemirror/theme/mdn-like.css">
+    <script src="./codemirror/mode/php/php.js"></script>
+    <script src="./codemirror/mode/python/python.js"></script>
+    <link rel="stylesheet" href="./codemirror/theme/mdn-like.css">
     <!-- Code mirror -->
     <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
@@ -48,7 +52,7 @@
     </asp:ContentPlaceHolder>
     </div>
 
-    <div id="footer" style="background-color:#f8fcff">
+    <div class="footer" style="background-color:#f8fcff">
         <p style="text-align:center;color:#337ab7">©Copyright Codos Inc.</p>
         <p style="text-align:center;color:#337ab7">All rights reserved.</p>
 	</div>
