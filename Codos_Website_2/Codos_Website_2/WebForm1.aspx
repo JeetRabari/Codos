@@ -50,27 +50,25 @@ Constraints
 <asp:Content ID="jkaj" ContentPlaceHolderID="Solution" runat="server">
     <pre>
         #include <iostream>
-using namespace std;
+        using namespace std;
 
-int main()
-{
-    char s[100];
-    cin>>s;
-    int i=0;
-    while(s[i]!='\0'){
-    	if(islower(s[i])){
-         cout<<(char)toupper(s[i]);
+        int main()
+        {
+            char s[100];
+            cin>>s;
+            int i=0;
+            while(s[i]!='\0'){
+    	        if(islower(s[i])){
+                cout<<(char)toupper(s[i]);
+    	        }
+    	        else{
+    		    cout<<(char)tolower(s[i]);
+    	         }
+            i++;
+        }
 
-    	}
-    	else{
-    		cout<<(char)tolower(s[i]);
-    	}
-   i++;
-  }
-
-    return 0;
-}
-
-
+        return 0;
+       }   
     </pre>
 </asp:Content>
+    

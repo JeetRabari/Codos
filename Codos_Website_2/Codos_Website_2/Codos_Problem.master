@@ -5,7 +5,12 @@
     <div class="container" style="height:inherit">
         <div class="row" id="row0">
             <div class="col-lg-8 col-lg-offset-1 col-sm-8 col-sm-offset-1 col-xs-8 col-xs-offset-1 col-md-8 col-md-offset-1" id="SitePath">
-                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+                <!-- Add sitemappath of asp after page has been created-->
+                <ol class="breadcrumb">
+                    <li><a href="#">Problems</a></li>
+                    <li><a href="#">Algorithms</a></li>
+                    <li class="active">Binary String</li>
+                </ol>
             </div>
         </div>
         <div class="row" id="row1">
@@ -25,7 +30,6 @@
             </div>
 
         </div>
-
         <div class="row" id="row3">
             <div class="col-lg-8 col-lg-offset-1 col-sm-8 col-sm-offset-1 col-xs-8 col-xs-offset-1 col-md-8 col-md-offset-1 tab-content" id="TabContent">
                 <div id="problem" class="tab-pane fade in active ">
@@ -33,6 +37,17 @@
                     <asp:ContentPlaceHolder ID="ProblemDescription" runat="server">
 
                     </asp:ContentPlaceHolder>
+                    <div id="editor" >
+                        <h2>Code Editor</h2>
+                        <script>
+                            var myCodeEditor = CodeMirror(document.getElementById("editor"), {
+                                value: "function myScript() { return 100; }\n",
+                                mode: "javascript",
+                                theme: "mdn-like",
+                                lineNumbers: true
+                            });
+                        </script>
+                    </div>
                 </div> 
 
                 <div id="solution" class="tab-pane fade">
@@ -49,16 +64,10 @@
                     </asp:ContentPlaceHolder>
                 </div>
             </div>
-
-            <div class="col-md-2 col-md-offset-1" style="background-color:#f8fcff">
-                <p>Test</p>
-                <br />
-                <br />
-                <br />
-                <br />
-                <p>Test</p>
-            </div>
        </div>
-
+        <div class="row" id="row4">
+            <div class="col-lg-8 col-lg-offset-1 col-sm-8 col-sm-offset-1 col-xs-8 col-xs-offset-1 col-md-8 col-md-offset-1" id="CodeEditor">
+            </div>
+        </div>
        </div>
 </asp:Content>
