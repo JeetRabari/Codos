@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Codos_Website_2
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Codos_Problem : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

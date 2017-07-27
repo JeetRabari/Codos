@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Codos.Master" AutoEventWireup="true" CodeBehind="Codos_Problem.master.cs" Inherits="Codos_Website_2.Codos_Problem" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="PageBody" runat="server">
+    
+    <div class="container" style="height:inherit">
+        <div class="row" id="row0">
+            <div class="col-lg-8 col-lg-offset-1 col-sm-8 col-sm-offset-1 col-xs-8 col-xs-offset-1 col-md-8 col-md-offset-1" id="SitePath">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+            </div>
+        </div>
+        <div class="row" id="row1">
+            <div class="col-lg-8 col-lg-offset-1 col-sm-8 col-sm-offset-1 col-xs-8 col-xs-offset-1 col-md-8 col-md-offset-1" id="DivProblemName">
+                <asp:ContentPlaceHolder ID="ProblemName" runat="server">
+                    
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="row" id="row2">
+            <div class="col-lg-8 col-lg-offset-1 col-sm-8 col-sm-offset-1 col-xs-8 col-xs-offset-1 col-md-8 col-md-offset-1" id="NavigationMenu">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a data-toggle="tab" href="#problem">PROBLEM</a></li>
+                    <li role="presentation"><a data-toggle="tab" href="#solution">SOLUTION</a></li>
+                    <li role="presentation"><a data-toggle="tab" href="#sub">YOUR SUBMISSION</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row" id="row3">
+            <div class="col-lg-8 col-lg-offset-1 col-sm-8 col-sm-offset-1 col-xs-8 col-xs-offset-1 col-md-8 col-md-offset-1 tab-content" id="TabContent">
+                <div id="problem" class="tab-pane fade in active ">
+                    <!--p>you are on page problem.read it and solve it.</p-->
+                    <asp:ContentPlaceHolder ID="ProblemDescription" runat="server">
+
+                    </asp:ContentPlaceHolder>
+                </div> 
+
+                <div id="solution" class="tab-pane fade">
+                    <!--p> gotta find a way to lock this untill user solve this.</p-->
+                    <asp:ContentPlaceHolder ID="Solution" runat="server">
+
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <div id="sub" class="tab-pane fade">
+                    <!--p> see all of your submission.</p-->
+                    <asp:ContentPlaceHolder ID="Submission" runat="server">
+                        
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-md-offset-1" style="background-color:#f8fcff">
+                <p>Test</p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <p>Test</p>
+            </div>
+       </div>
+
+       </div>
+</asp:Content>

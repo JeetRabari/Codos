@@ -1,19 +1,24 @@
-﻿html,
-body {
+﻿html, body {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-#body {
-    padding: 10px;
-    padding-bottom: 50px; /* Height of the footer */
+body {
+    display: block
 }
 
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
 #footer {
+    background: #f8fcff;
+    border-top: 1px solid #f8fcff;
+    color: #333;
+    width: 100%;
+    height: 60px;
     position: absolute;
     bottom: 0;
-    width: 100%;
-    height: 50px; /* Height of the footer */
-    background: #f8fcff;
+    left: 0;
 }
