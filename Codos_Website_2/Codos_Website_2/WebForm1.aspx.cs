@@ -11,7 +11,7 @@ namespace Codos_Website_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            Session["problemID"] = 40;  
         }
     }
 }

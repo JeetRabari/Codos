@@ -13,5 +13,12 @@ namespace Codos_Website_2
         {
 
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Random rnd = new Random();
+            TextBox1.Text = (Session["problemID"] + "_" + rnd.Next().ToString()).ToString();
+            TextBox2.Text = (Session["problemID"] + "_" + rnd.Next().ToString()).ToString();
+        }
     }
 }

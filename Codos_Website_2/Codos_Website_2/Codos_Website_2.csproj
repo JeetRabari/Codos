@@ -608,6 +608,7 @@
     <Content Include="codemirror\theme\xq-light.css" />
     <Content Include="codemirror\theme\yeti.css" />
     <Content Include="codemirror\theme\zenburn.css" />
+    <Content Include="images\C.ico" />
     <Content Include="js\jquery-3.2.1.min.js" />
     <Content Include="css\sticky-footer-navbar.css" />
     <Content Include="packages.config" />
