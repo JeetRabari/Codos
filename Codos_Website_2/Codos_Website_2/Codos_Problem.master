@@ -36,20 +36,34 @@
                 <div id="problem" class="tab-pane fade in active ">
                     <!--p>you are on page problem.read it and solve it.</p-->
                     <asp:ContentPlaceHolder ID="ProblemDescription" runat="server">
-
+                       
                     </asp:ContentPlaceHolder>
-                    <div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Panel heading</div>
-  <div class="panel-body">
-   
-  </div>
-
-  <!-- Table -->
-  <table class="table">
-    
-  </table>
-</div>
+                    <div class="panel panel-default"> 
+                       <div class="panel-body">
+                            <table class="table table-condensed">
+                                <tr>
+                                    <td style="font-weight:bolder;color:#337ab7">Time Limit:</td>
+                                    <td style="color:#4c789e">2.0 sec(s) for each input file.</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:bolder;color:#337ab7">Memory Limit:</td>
+                                    <td style="color:#4c789e">256 MB</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:bolder;color:#337ab7">Source Limit:</td>
+                                    <td style="color:#4c789e">1024 KB</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:bolder;color:#337ab7">Marking Scheme:</td>
+                                    <td style="color:#4c789e">Marks are awarded when all the testcases pass.</td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight:bolder;color:#337ab7">Allowed Languages:</td>
+                                    <td style="color:#4c789e">C,C++,C#,JAVA 8,JavaScript(Rhino),JavaScript(Node.js),PHP,Python 2,Python 3</td>
+                                </tr>
+                            </table>
+                       </div>
+                    </div>
                     <hr class="divider" style="border-width: 2px;border-color: #337ab7;" />
                     
                     <div id="editor">
@@ -76,7 +90,7 @@
                            <script>
                                 $(document).ready(function () {
                                     $('#langList li a').bind('click', function () {
-                                        if ($(this).html() == "C") {
+                                            if ($(this).html() == "C") {
                                             myCodeMirror.setOption("mode", "text/x-csrc");
                                             myCodeMirror.setOption("value", "#include <stdio.h>\n\nint main(){\nprintf(\"Hello World!\\n\");\n\nreturn 0;\n}");
                                         } else if ($(this).html() == "JavaScript(Rhino)") {
@@ -147,16 +161,19 @@
                 </div> 
 
                 <div id="solution" class="tab-pane fade">
+                    <div class="panel panel-default" style="margin:0px">
                     <asp:ContentPlaceHolder ID="Solution" runat="server">
 
                     </asp:ContentPlaceHolder>
+                    </div>
                 </div>
 
                 <div id="sub" class="tab-pane fade">
-                    <!--p> see all of your submission.</p-->
+                     <div class="panel panel-default" style="margin:0px">
                     <asp:ContentPlaceHolder ID="Submission" runat="server">
                         
                     </asp:ContentPlaceHolder>
+                    </div>
                 </div>
 
                 
@@ -178,53 +195,46 @@
                                 <asp:ListItem>Python 2</asp:ListItem>
                                 <asp:ListItem>Python 3</asp:ListItem>
                             </asp:DropDownList><br />
-                           <%-- <span>Time:</span><asp:TextBox ID="TextBox1" runat="server"  style="width: 100px;margin-left: 10px;margin-top: 10px;"></asp:TextBox>
-                            <br /><span>Memory:</span><asp:TextBox ID="TextBox2" runat="server" style="width: 100px;margin-left: 10px;margin-top: 10px;"></asp:TextBox>
-                            <br /><span>User:</span><asp:TextBox ID="TextBox3" runat="server" style="width: 100px;margin-left: 10px;margin-top: 10px;"></asp:TextBox>
-                            <br /><asp:Button ID="Button3" runat="server" Text="View Best Submission" cssClass="btn btn-primary" style="margin-top:10px"/>
-                            --%>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <tr>
-                                        <td>
-                                            Time:
-                                        </td>
-                                        <td>
-                                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Memory:
-                                        </td>
-                                        <td>
-                                            <asp:TextBox ID="TextBox2" runat="server" ></asp:TextBox>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            User:
-                                        </td>
-                                        <td>
-                                            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <asp:Button ID="Button3" runat="server" Text="View Best Submission" cssClass="btn btn-primary" style="margin-top:10px"/>
-                                        </td>
-                                    </tr>
+                            <table style="width:100%;" class="table-responsive">
+                                <tr>
+                                    <td style="width: 133px">Time</td>
+                                    <td><asp:TextBox ID="TextBox1" runat="server"  style="width: 100px;margin-left: 10px;margin-top: 10px;"></asp:TextBox></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 133px">Memory</td>
+                                    <td><asp:TextBox ID="TextBox2" runat="server"  style="width: 100px;margin-left: 10px;margin-top: 10px;"></asp:TextBox></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 133px">By User</td>
+                                    <td><asp:TextBox ID="TextBox3" runat="server" style="width: 100px;margin-left: 10px;margin-top: 10px;"></asp:TextBox></td>
+                                </tr>
                                 </table>
-                            </div>
+                           <asp:Button ID="Button3" runat="server" Text="View Best Submission" cssClass="btn btn-primary" style="margin-top:10px"/>    
                         </div>
                         </div>
 
                         <div class="col-xs-6 col-md-3" style="height:180px;margin-top:30px;float: right">
-                        <div class="jumbotron" style="padding:20px;height:100%">
-                            <p style="text-align: center">Author</p>
+                            <div class="jumbotron" style="padding:20px;height:100%">
+                                <p style="text-align: center">Author</p>
                             
-                            <span>Problem setter:</span><asp:TextBox ID="TextBox4" runat="server"  style="width: 100px;margin-left: 10px;margin-top: 10px;"></asp:TextBox>
-                            <br /><span>Tester:</span><asp:TextBox ID="TextBox5" runat="server" style="width: 100px;margin-left: 10px;margin-top: 10px;"></asp:TextBox>
+                               <table style="width:100%;" class="table-responsive">
+                                    <tr>
+                                        <td>
+                                            Problem Setter
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="TextBox4" runat="server"  style="width: 100px;margin-left: 10px;margin-top: 10px;"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Tester
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="TextBox5" runat="server" style="width: 100px;margin-left: 10px;margin-top: 10px;"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    </table>
                             </div>
                         </div>
                     </div>
