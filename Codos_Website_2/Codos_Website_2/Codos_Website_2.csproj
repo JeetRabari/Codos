@@ -608,7 +608,12 @@
     <Content Include="codemirror\theme\xq-light.css" />
     <Content Include="codemirror\theme\yeti.css" />
     <Content Include="codemirror\theme\zenburn.css" />
+    <Content Include="css\verticalMenu.css" />
+    <Content Include="images\algorithms.png" />
+    <Content Include="images\basic-programming.png" />
     <Content Include="images\C.ico" />
+    <Content Include="images\data-structures.png" />
+    <Content Include="images\math.png" />
     <Content Include="js\jquery-3.2.1.min.js" />
     <Content Include="css\sticky-footer-navbar.css" />
     <Content Include="packages.config" />
@@ -655,6 +660,7 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="practicePage.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -672,6 +678,13 @@
     </Compile>
     <Compile Include="Codos_Problem.master.designer.cs">
       <DependentUpon>Codos_Problem.master</DependentUpon>
+    </Compile>
+    <Compile Include="practicePage.aspx.cs">
+      <DependentUpon>practicePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="practicePage.aspx.designer.cs">
+      <DependentUpon>practicePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebForm1.aspx.cs">
