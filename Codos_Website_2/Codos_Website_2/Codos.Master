@@ -23,17 +23,19 @@
     <script type="text/javascript" src="./js/bootstrap.min.js"></script>
     <!--new added-->
     <link rel="stylesheet" href="./css/verticalMenu.css">
+    <!-- w3 css-->
+    <link rel="stylesheet" href="./css/w3.css">
 </head>
 <body style="background-color:#daeaee">
 
     <div id="wrapper">
     <div class="page-header" style="margin-top:0px;padding-top:-20px;background-color:#f8fcff;height:70px">
         <h1 style="border-style: none; border-color: inherit; border-width: 0px; font-family:Courier New; font-size:xx-large; font-weight:bold; margin:0px 0px 0px 30px; width:123px; padding:0px; position:relative; top: 18px; left: 5px;">
-            <a href="./WebForm1.aspx">Codos</a>
+            <a href="javascript:void(0)">Codos</a>
         </h1>
       
         <ul class="nav nav-pills">
-            <li role="presentation" style="text-align:center"><a href="#">Challenges</a></li>
+            <li role="presentation" style="text-align:center"><a href="./Codos_Hiring.aspx">Challenges</a></li>
             <li role="presentation" style="text-align:center"><a href="./practicePage.aspx">Practice</a></li>
             <li role="presentation" class="dropdown" style="float: right;margin-right: 200px;">
                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="width:150px">

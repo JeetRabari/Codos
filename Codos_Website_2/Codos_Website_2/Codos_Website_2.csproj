@@ -608,14 +608,38 @@
     <Content Include="codemirror\theme\xq-light.css" />
     <Content Include="codemirror\theme\yeti.css" />
     <Content Include="codemirror\theme\zenburn.css" />
+    <Content Include="Codos_Hiring.aspx" />
+    <Content Include="Codos_Home_Page.aspx" />
+    <Content Include="css\flexslider.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\lightbox.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\swipebox.css" />
     <Content Include="css\verticalMenu.css" />
+    <Content Include="css\w3.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="images\algorithms.png" />
     <Content Include="images\basic-programming.png" />
     <Content Include="images\C.ico" />
+    <Content Include="images\companies.png" />
     <Content Include="images\data-structures.png" />
+    <Content Include="images\google-analytics.jpg" />
+    <Content Include="images\img_avatar2.png" />
+    <Content Include="images\img_chicago.jpg" />
+    <Content Include="images\img_la.jpg" />
+    <Content Include="images\img_ny.jpg" />
+    <Content Include="images\login_image.jpg" />
     <Content Include="images\math.png" />
+    <Content Include="images\morgan.jpg" />
+    <Content Include="images\oracle.jpg" />
+    <Content Include="images\sign_up.png" />
+    <Content Include="js\jarallax.js" />
+    <Content Include="js\jquery-2.1.4.min.js" />
     <Content Include="js\jquery-3.2.1.min.js" />
     <Content Include="css\sticky-footer-navbar.css" />
+    <Content Include="js\jquery.flexslider.js" />
+    <Content Include="js\lightbox-plus-jquery.min.js" />
+    <Content Include="js\SmoothScroll.min.js" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -643,6 +667,12 @@
     <Content Include="codemirror\LICENSE" />
     <Content Include="codemirror\package.json" />
     <Content Include="codemirror\README.md" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Codos_Challanges.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -656,7 +686,6 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="HE_logo.png" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
@@ -671,6 +700,27 @@
     </Compile>
     <Compile Include="Codos.Master.designer.cs">
       <DependentUpon>Codos.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Codos_Challanges.master.cs">
+      <DependentUpon>Codos_Challanges.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Codos_Challanges.master.designer.cs">
+      <DependentUpon>Codos_Challanges.master</DependentUpon>
+    </Compile>
+    <Compile Include="Codos_Hiring.aspx.cs">
+      <DependentUpon>Codos_Hiring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Codos_Hiring.aspx.designer.cs">
+      <DependentUpon>Codos_Hiring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Codos_Home_Page.aspx.cs">
+      <DependentUpon>Codos_Home_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Codos_Home_Page.aspx.designer.cs">
+      <DependentUpon>Codos_Home_Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Codos_Problem.master.cs">
       <DependentUpon>Codos_Problem.master</DependentUpon>

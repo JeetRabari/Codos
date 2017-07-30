@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Codos.Master" AutoEventWireup="true" CodeBehind="Codos_Challanges.master.cs" Inherits="Codos_Website_2.NestedMasterPage1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="PageBody" runat="server">
+    <div class="container" style="height:inherit;"><div id="s1">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#hiring">Hiring</a></li>
+            <li role="presentation"><a href="#codos_rated">Rated</a></li>
+        </ul>
+    </div>
+    <div id="adk">
+        <!-- blank :to increade one row -->
+    </div>
+    <div id="hiring" class="tab-pane fade in active ">
+        <asp:ContentPlaceHolder ID="Hiring" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="codos_rated" class="tab-pane fade in active ">
+        <asp:ContentPlaceHolder ID="Rated" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+        </div>
+</asp:Content>
