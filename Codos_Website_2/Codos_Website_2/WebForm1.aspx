@@ -3,24 +3,6 @@
 
 
 <asp:Content ID="MyContent" ContentPlaceHolderID="ProblemName" runat="server">
-    <%--<div class="container">
-     <div class="row">
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-
-        </div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">.col-md-1</div>
-    </div>--%>
-
   <h1>Binary String</h1>
 </asp:Content>
 
@@ -53,7 +35,7 @@ Constraints
 <asp:Content ID="jkaj" ContentPlaceHolderID="Solution" runat="server">
     <div class="jumbotron" style="padding:20px">
     
-    <code>
+    <code><pre>
         #include <iostream>
         using namespace std;
 
@@ -74,6 +56,7 @@ Constraints
 
         return 0;
        }  
+            </pre>
      </code>
     </div>
 </asp:Content>

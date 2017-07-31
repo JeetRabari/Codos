@@ -7,9 +7,7 @@
             <li role="presentation"><a href="#codos_rated">Rated</a></li>
         </ul>
     </div>
-    <div id="adk">
-        <!-- blank :to increade one row -->
-    </div>
+        <br/>
     <div id="hiring" class="tab-pane fade in active ">
         <asp:ContentPlaceHolder ID="Hiring" runat="server">
         </asp:ContentPlaceHolder>

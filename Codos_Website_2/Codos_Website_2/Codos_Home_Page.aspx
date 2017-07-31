@@ -188,7 +188,7 @@
                             <label><b>Password</b></label>
                             <input type="password" placeholder="Enter Password" name="psw" required />
 
-                            <input type="checkbox" checked="checked" /><label><b>Remember me</b></label>
+                            <input type="checkbox" checked="checked" /><label style="color:black"><b>Remember me</b></label>
                             
                         </div>
 
@@ -232,7 +232,7 @@
 
       <label><b>Confirm Password</b></label>
       <input type="password" placeholder="Confirm Password" name="psw-repeat" required=""/>
-      <input type="checkbox" checked="checked"/><label><b>Remember me</b></label>
+      <input type="checkbox" checked="checked"/><label style="color:black"><b>Remember me</b></label>
       <%--<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>--%>
 
       <div class="clearfix">

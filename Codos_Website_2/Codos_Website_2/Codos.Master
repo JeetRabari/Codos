@@ -42,7 +42,7 @@
                      <span class="glyphicon glyphicon-user" aria-hidden="true" style="margin-right:5px"></span>User Name <span class="caret"></span>
                  </a>
             <ul class="dropdown-menu">
-                <li><a href="#">Profile</a></li>
+                <li><a href="./profilePage.aspx">Profile</a></li>
                 <li><a href="#">Activity</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Logout</a></li>
